@@ -1,0 +1,26 @@
+# Core de LangChain y OpenAI
+langchain-core
+langchain-openai
+openai
+
+# Graph orchestration
+langgraph
+
+# Streamlit para la interfaz web
+streamlit
+
+# Acceso a datos y DB
+pandas
+sqlalchemy
+psycopg2-binary
+psycopg
+
+# HTTP y APIs
+requests
+yfinance
+
+# Visualización
+matplotlib
+
+# (Opcional) Para tipado avanzado en Python <3.9
+# typing-extensions
