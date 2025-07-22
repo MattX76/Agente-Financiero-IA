@@ -1,4 +1,6 @@
 # Agente‑Financiero‑IA
+<img width="1914" height="965" alt="image" src="https://github.com/user-attachments/assets/4301af90-ed62-4f3f-8f88-bc79e25a2beb" />
+
 
 Asistente financiero modular basado en LangChain, LangGraph y Streamlit que permite:
 
