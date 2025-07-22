@@ -62,94 +62,81 @@ Asistente financiero modular basado en LangChain, LangGraph y Streamlit que perm
 ## 🚀 Instalación
 
 1. Clona el repositorio:  
-   ```bash
-   git clone https://github.com/mattx76/Agente‑Financiero‑IA.git
-   cd Agente‑Financiero‑IA
-Crea y activa un entorno virtual:
+       
+       git clone https://github.com/mattx76/Agente-Financiero-IA.git  
+       cd Agente-Financiero-IA  
 
-bash
-Copiar
-Editar
-python -m venv .venv
-source .venv/bin/activate   # Linux/macOS
-.venv\Scripts\activate      # Windows
-Instala dependencias:
+2. Crea y activa un entorno virtual:  
+       
+       python -m venv .venv  
+       source .venv/bin/activate    # Linux/macOS  
+       .venv\Scripts\activate       # Windows  
 
-bash
-Copiar
-Editar
-pip install -r requirements.txt
-⚙️ Configuración
-Clave de OpenAI
-Crea un archivo api_key.txt en la raíz (añádelo a .gitignore) con tu clave:
+3. Instala las dependencias:  
+       
+       pip install -r requirements.txt  
 
-Copiar
-Editar
-sk-...
-Conexión a PostgreSQL
-Crea data_postgres.txt con:
+## ⚙️ Configuración
 
-txt
-Copiar
-Editar
-PG_HOST=localhost
-PG_PORT=5432
-PG_USER=usuario
-PG_PASS=contraseña
-PG_DB=nombre_db
-Checkpoints de LangGraph
-Define en checkpointer.txt:
+1. **Clave de OpenAI**  
+   Crea un archivo `api_key.txt` en la raíz (añádelo a `.gitignore`) con tu clave:  
+       
+       sk-...
 
-txt
-Copiar
-Editar
-table=checkpoints
-schema=public
-Tip: Si prefieres variables de entorno, usa un .env y python‑dotenv.
+2. **Conexión a PostgreSQL**  
+   Crea `data_postgres.txt` con:  
+       
+       PG_HOST=localhost  
+       PG_PORT=5432  
+       PG_USER=usuario  
+       PG_PASS=contraseña  
+       PG_DB=nombre_db  
 
-▶️ Uso
-Arranca la app de Streamlit:
+3. **Checkpoints de LangGraph**  
+   Define en `checkpointer.txt`:  
+       
+       table=checkpoints  
+       schema=public  
 
-bash
-Copiar
-Editar
-streamlit run app.py
-Abre en tu navegador:
+> **Tip:** Si prefieres variables de entorno, usa un `.env` y `python-dotenv`.
 
-arduino
-Copiar
-Editar
-http://localhost:8501
-Selecciona un agente, introduce la consulta (símbolo de ticker o nombre), ¡y consulta tus datos!
+## ▶️ Uso
 
-📂 Estructura del proyecto
-bash
-Copiar
-Editar
-├── agents.py          # Definición de agentes y prompts
-├── graph.py           # Orquestación con LangGraph
-├── my_tools.py        # Wrappers y funciones de análisis JSON/DB
-├── app.py             # Interfaz Streamlit
-├── requirements.txt
-├── api_key.txt        # (git‑ignored) OpenAI API key
-├── data_postgres.txt  # (git‑ignored) Credenciales Postgres
-├── checkpointer.txt   # (git‑ignored) Configuración de checkpoints
-└── .gitignore
-🧹 Buenas prácticas
-Incluye __pycache__/, .venv/, y archivos sensibles en .gitignore.
+1. Arranca la app de Streamlit:  
+       
+       streamlit run app.py  
 
-No subas nunca tu clave de API ni credenciales.
+2. Abre en tu navegador:  
+       
+       http://localhost:8501  
 
-Documenta cada nuevo agente o herramienta que añadas.
+3. Selecciona un agente, introduce la consulta (símbolo de ticker o nombre) ¡y explora tus datos!
 
-🤝 Contribuciones
-Haz un fork
+## 📂 Estructura del proyecto
 
-Crea una rama (git checkout -b feature/nombre)
+    ├── agents.py          # Definición de agentes y prompts  
+    ├── graph.py           # Orquestación con LangGraph  
+    ├── my_tools.py        # Wrappers y funciones de análisis JSON/DB  
+    ├── app.py             # Interfaz Streamlit  
+    ├── requirements.txt  
+    ├── api_key.txt        # (git‑ignored) OpenAI API key  
+    ├── data_postgres.txt  # (git‑ignored) Credenciales Postgres  
+    ├── checkpointer.txt   # (git‑ignored) Configuración de checkpoints  
+    └── .gitignore  
 
-Envía tus commits (git commit -m "Descripción")
+## 🧹 Buenas prácticas
 
-Abre un Pull Request
+- Añade `__pycache__/`, `.venv/` y archivos sensibles a `.gitignore`.  
+- Nunca subas tu clave de API ni credenciales.  
+- Documenta cada nuevo agente o herramienta que añadas.  
 
-📄 Licencia
-Este proyecto está bajo la licencia MIT. Véase el archivo LICENSE para más detalles.
+## 🤝 Contribuciones
+
+1. Haz un **fork**  
+2. Crea una **rama** (`git checkout -b feature/nombre`)  
+3. Envía tus **commits** (`git commit -m "Descripción"`)  
+4. Abre un **Pull Request**  
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia **MIT**. Véase el archivo [LICENSE](LICENSE) para más detalles.
