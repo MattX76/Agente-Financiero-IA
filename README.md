@@ -65,3 +65,91 @@ Asistente financiero modular basado en LangChain, LangGraph y Streamlit que perm
    ```bash
    git clone https://github.com/mattx76/Agente‑Financiero‑IA.git
    cd Agente‑Financiero‑IA
+Crea y activa un entorno virtual:
+
+bash
+Copiar
+Editar
+python -m venv .venv
+source .venv/bin/activate   # Linux/macOS
+.venv\Scripts\activate      # Windows
+Instala dependencias:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+⚙️ Configuración
+Clave de OpenAI
+Crea un archivo api_key.txt en la raíz (añádelo a .gitignore) con tu clave:
+
+Copiar
+Editar
+sk-...
+Conexión a PostgreSQL
+Crea data_postgres.txt con:
+
+txt
+Copiar
+Editar
+PG_HOST=localhost
+PG_PORT=5432
+PG_USER=usuario
+PG_PASS=contraseña
+PG_DB=nombre_db
+Checkpoints de LangGraph
+Define en checkpointer.txt:
+
+txt
+Copiar
+Editar
+table=checkpoints
+schema=public
+Tip: Si prefieres variables de entorno, usa un .env y python‑dotenv.
+
+▶️ Uso
+Arranca la app de Streamlit:
+
+bash
+Copiar
+Editar
+streamlit run app.py
+Abre en tu navegador:
+
+arduino
+Copiar
+Editar
+http://localhost:8501
+Selecciona un agente, introduce la consulta (símbolo de ticker o nombre), ¡y consulta tus datos!
+
+📂 Estructura del proyecto
+bash
+Copiar
+Editar
+├── agents.py          # Definición de agentes y prompts
+├── graph.py           # Orquestación con LangGraph
+├── my_tools.py        # Wrappers y funciones de análisis JSON/DB
+├── app.py             # Interfaz Streamlit
+├── requirements.txt
+├── api_key.txt        # (git‑ignored) OpenAI API key
+├── data_postgres.txt  # (git‑ignored) Credenciales Postgres
+├── checkpointer.txt   # (git‑ignored) Configuración de checkpoints
+└── .gitignore
+🧹 Buenas prácticas
+Incluye __pycache__/, .venv/, y archivos sensibles en .gitignore.
+
+No subas nunca tu clave de API ni credenciales.
+
+Documenta cada nuevo agente o herramienta que añadas.
+
+🤝 Contribuciones
+Haz un fork
+
+Crea una rama (git checkout -b feature/nombre)
+
+Envía tus commits (git commit -m "Descripción")
+
+Abre un Pull Request
+
+📄 Licencia
+Este proyecto está bajo la licencia MIT. Véase el archivo LICENSE para más detalles.
