@@ -126,18 +126,6 @@ Asistente financiero modular basado en LangChain, LangGraph y Streamlit que perm
     ├── checkpointer.txt   # (git‑ignored) Configuración de checkpoints  
     └── .gitignore  
 
-## 🧹 Buenas prácticas
-
-- Añade `__pycache__/`, `.venv/` y archivos sensibles a `.gitignore`.  
-- Nunca subas tu clave de API ni credenciales.  
-- Documenta cada nuevo agente o herramienta que añadas.  
-
-## 🤝 Contribuciones
-
-1. Haz un **fork**  
-2. Crea una **rama** (`git checkout -b feature/nombre`)  
-3. Envía tus **commits** (`git commit -m "Descripción"`)  
-4. Abre un **Pull Request**  
 
 ## 📄 Licencia
 
